@@ -30,7 +30,6 @@ header {
   background-color: #514c9b;
   padding: 15px 30px; /* more padding for breathing room */
   box-shadow: 0 2px 8px rgba(63, 63, 63, 0.2); 
-  position: sticky; 
   top: 0;
   z-index: 1000;
 }
@@ -185,12 +184,47 @@ footer {
 
 /* Article Section */
 article {
-  margin: 50px 0;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
+  background-color: #1e1e2f;
+  color: #cbe1ff;
+  margin: 40px auto;
+  padding: 30px 40px;
+  border-radius: 12px;
+  max-width: 1000px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  line-height: 1.8;
+  font-size: 20px;
+  border-left: 6px solid #8475f2;
+  transition: transform 0.2s ease;
 }
+
+article:hover {
+  transform: translateY(-5px);
+}
+
+article h3 {
+  color: #ffd866;
+  font-size: 30px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+article p {
+  color: #e6ebff;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+article .rating {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ffd866;
+}
+
+article .rating i {
+  margin-right: 5px;
+  color: #ffd866;
+}
+
 
 a {
   color: #8475f2;
@@ -654,16 +688,16 @@ h1{
 
 #dungeon-player {
   top: 600px;
-  left: 100px;
+  left: 125px;
 }
-
-
 
 .legend {
   display: flex;
-  justify-content: center;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center;
   margin-top: 20px;
 }
+
 .legend h2 {
   font-size: 30px;
   color: #8475f2;
@@ -672,13 +706,19 @@ h1{
   padding-bottom: 20px;
   text-transform: uppercase;
 }
-.legend ul,li {
+.legend ul {
   list-style: none;
   padding: 0;
+  padding-bottom: 30px;
   margin: 0;
   display: flex;
-  gap: 20px; /* Space between legend items */
+  gap: 20px;
 }
+
+.legend li {
+  list-style: none;
+}
+
 .map-container{
   display: flex;
   justify-content: center;
