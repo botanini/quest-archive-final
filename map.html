@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Into the Dungeon: Map</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+<body>
+  <header>
+    <nav>
+      <a href="index.html">
+        <img src="images/logo.svg" alt="Into the Dungeon" />
+      </a>
+      <ul>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="starter-kit.html">Starter Kit</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="map.html">Map</a></li>
+      </ul>
+    </nav>
+  </header>
+<div class="map-container">
+  
+  <main class="wrapper"></main>
+    <section class="intro">
+      <h1>Dungeon Map</h1>
+      <p>Explore our custom-made dungeon map. Click on markers to see common things found in a dungeon!</p>
+    </section>
+    
+    <div class="dungeonmap-container">
+      <div class="dungeonmap">
+        <!-- Room Icons with Tooltip Descriptions -->
+        <a href="#dungeon-chest" class="tooltip">
+          <i class="fa-solid fa-coins icon-gold dungeon-item" id="dungeon-chest"></i>
+          <span class="tooltiptext">Treasure Vault: Magical gold and artifacts (watch for mimics)</span>
+        </a>
+    
+        <a href="#dungeon-mural" class="tooltip">
+          <i class="fa-solid fa-scroll icon-yellow dungeon-item" id="dungeon-mural"></i>
+          <span class="tooltiptext">Ancient Mural: Tells the story of a lost civilization</span>
+        </a>
+    
+        <a href="#dungeon-door" class="tooltip">
+          <i class="fa-solid fa-circle-question icon-red dungeon-item" id="dungeon-door"></i>
+          <span class="tooltiptext">Strange Door: Unknown destination lies beyond</span>
+        </a>
+    
+        <a href="#dungeon-altar" class="tooltip">
+          <i class="fa-solid fa-puzzle-piece icon-purple dungeon-item" id="dungeon-altar"></i>
+          <span class="tooltiptext">Mysterious Altar: Arcane rituals once performed here</span>
+        </a>
+    
+        <a href="#dungeon-circle" class="tooltip">
+          <i class="fa-solid fa-circle-question icon-purple dungeon-item" id="dungeon-circle"></i>
+          <span class="tooltiptext">Mystic Circle: Glows faintly with magical energy</span>
+        </a>
+    
+        <a href="#dungeon-body" class="tooltip">
+          <i class="fa-solid fa-puzzle-piece icon-purple dungeon-item" id="dungeon-body"></i>
+          <span class="tooltiptext">Dead Body: Old bones and broken gear</span>
+        </a>
+    
+        <a href="#dungeon-note" class="tooltip">
+          <i class="fa-solid fa-scroll icon-purple dungeon-item" id="dungeon-note"></i>
+          <span class="tooltiptext">Discarded Note: Hints at what lies ahead</span>
+        </a>
+    
+        <a href="#dungeon-puzzle" class="tooltip">
+          <i class="fa-solid fa-puzzle-piece icon-purple dungeon-item" id="dungeon-puzzle"></i>
+          <span class="tooltiptext">Puzzle Room: Tiles shift; a riddle awaits</span>
+        </a>
+    
+        <a href="#dungeon-skull" class="tooltip">
+          <i class="fa-solid fa-user icon-purple dungeon-item" id="dungeon-skull"></i>
+          <span class="tooltiptext">Skeleton: Hostile undead inhabit this room</span>
+        </a>
+    
+        <a href="#dungeon-player" class="tooltip">
+          <i class="fa-solid fa-user icon-purple dungeon-item" id="dungeon-player"></i>
+          <span class="tooltiptext">You Are Here: The player’s starting point</span>
+        </a>
+      </div>
+    </div>
+    
+
+    <h2>Legend</h2>
+    <ul>
+      <li><i class="fa-solid fa-puzzle-piece"></i> Puzzles</li>
+      <li><i class="fa-solid fa-coins"></i> Loot</li>
+      <li><i class="fa-solid fa-user"></i> Entities</li>
+      <li><i class="fa-solid fa-scroll"></i> Lore</li>
+      <li><i class="fa-solid fa-circle-question"></i> Unknown</li>
+    </ul>
+
+
+    <h3 id="dungeon-chest">Treasure Vault</h3>
+    <p>A glittering stash of gold and magical artifacts. Watch for mimics.</p>
+
+    <h3 id="dungeon-altar">Mysterious Altar</h3>
+    <p>A Mysterious altar</p>
+
+    <h3 id="dungeon-body">The dead body</h3>
+    <p>A body of someone who once lived here now simply a skeleton. Old bones and broken gear lie in a heap.</p>
+    
+    <h3 id="dungeon-mural">Ancient Mural</h3>
+    <p>A wall painting tells the story of a lost civilization.</p>
+
+    <h3 id="dungeon-note">Discarded Note</h3>
+    <p>The crumpled parchment reveals a clue.</p>
+
+    <h3 id="dungeon-skull">An skeleton</h3>
+    <p>Unlike the one found at the entrance this one is hosile.</p>
+
+    <h3 id="dungeon-circle">Mystic Circle</h3>
+    <p>A glowing runic circle pulses with arcane energy.</p>
+
+    <h3 id="dungeon-puzzle">Puzzle </h3>
+    <p>Tiles on the floor shift with each step. A riddle awaits.</p>
+</div>
+
+</body>
+</html>
+
+  <footer>
+    <p>&copy; 2025 Quest Archive. All rights reserved.</p>
+  </footer>
+</body>
+</html>
