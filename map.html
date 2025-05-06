@@ -1,174 +1,430 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Into the Dungeon: Map</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css?=v2" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Into the Dungeon: Map</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css?=v2" />
+  </head>
 
-<body>
-  <header>
-    <nav>
-      <a href="index.html">
-        <img src="images/logo.svg" alt="Into the Dungeon" />
-      </a>
-      <ul>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="starter-kit.html">Starter Kit</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="map.html">Map</a></li>
-      </ul>
-    </nav>
-  </header>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">
+          <img src="images/logo.svg" alt="Into the Dungeon" />
+        </a>
+        <ul>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="starter-kit.html">Starter Kit</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="blog.html">Visual Essay</a></li>
+        </ul>
+      </nav>
+    </header>
 
-  <main class="map-container">
-    <section class="intro">
-      <h1>Into the Dungeon!</h1>
-      <p>Hover over markers to learn more, and click for detailed descriptions of what you can find in a dungeon below.</p>
-    </section>
+    <main class="map-container">
+      <section class="intro">
+        <h1>Into the Dungeon!</h1>
+        <p>
+          Hover over markers to learn more, and click for detailed descriptions
+          of what you can find in a dungeon below. Start at the red icon!
+        </p>
+      </section>
 
-    <div class="dungeonmap-container">
-      <div class="dungeonmap">
-        <a href="#chest" class="tooltip" id="dungeon-chest">
-          <i class="fa-solid fa-coins dungeon-item"></i>
-          <span class="tooltiptext">Treasure</span>
-        </a>
-        <a href="#altar" class="tooltip" id="dungeon-altar">
-          <i class="fa-solid fa-puzzle-piece dungeon-item"></i>
-          <span class="tooltiptext">Ancient Altar</span>
-        </a>
-        <a href="#door" class="tooltip" id="dungeon-door">
-          <i class="fa-solid fa-circle-question dungeon-item"></i>
-          <span class="tooltiptext">Locked Door</span>
-        </a>
-        <a href="#circle" class="tooltip" id="dungeon-circle">
-          <i class="fa-solid fa-circle-question dungeon-item"></i>
-          <span class="tooltiptext">Mystic Circle</span>
-        </a>
-        <a href="#mural" class="tooltip" id="dungeon-mural">
-          <i class="fa-solid fa-scroll dungeon-item"></i>
-          <span class="tooltiptext">Mural Room</span>
-        </a>
-        <a href="#skull" class="tooltip" id="dungeon-skull">
-          <i class="fa-solid fa-skull dungeon-item"></i>
-          <span class="tooltiptext">Skeleton Encounter</span>
-        </a>
-        <a href="#player" class="tooltip" id="dungeon-player">
-          <i class="fa-solid fa-user dungeon-item"></i>
-          <span class="tooltiptext">You</span>
-        </a>
-        <a href="#body" class="tooltip" id="dungeon-body">
-          <i class="fa-solid fa-skull dungeon-item"></i>
-          <span class="tooltiptext">Dead Body</span>
-        </a>
-        <a href="#puzzle" class="tooltip" id="dungeon-puzzle">
-          <i class="fa-solid fa-puzzle-piece dungeon-item"></i>
-          <span class="tooltiptext">An orb?</span>
-        </a>
-        <a href="#note" class="tooltip" id="dungeon-note">
-          <i class="fa-solid fa-scroll dungeon-item"></i>
-          <span class="tooltiptext">A Note</span>
-        </a>
+      <div class="dungeonmap-container" id="dungeon-map">
+        <div class="dungeonmap">
+          <a href="#chest" class="tooltip" id="dungeon-chest">
+            <i class="fa-solid fa-coins dungeon-item"></i>
+            <div class="tooltiptext">
+              <p>Treasure Chest</p>
+              <img src="images/chest.svg" alt="Treasure Chest" />
+            </div>
+          </a>
+          <a href="#altar" class="tooltip" id="dungeon-altar">
+            <i class="fa-solid fa-puzzle-piece dungeon-item"></i>
+            <div class="tooltiptext">
+              <p>Ancient Altar</p>
+              <img src="images/altar.svg" alt="Altar" />
+            </div>
+          </a>
+          <a href="#door" class="tooltip" id="dungeon-door">
+            <i class="fa-solid fa-circle-question dungeon-item"></i>
+            <div class="tooltiptext">
+              <p>Locked Door</p>
+              <img src="images/door.svg" alt="Door" />
+            </div>
+          </a>
+          <a href="#circle" class="tooltip" id="dungeon-circle">
+            <i class="fa-solid fa-circle-question dungeon-item"></i>
+            <div class="tooltiptext">
+              <p>Mystic Circle</p>
+              <img src="images/circle.svg" alt="Circle" />
+            </div>
+          </a>
+          <a href="#mural" class="tooltip" id="dungeon-mural">
+            <i class="fa-solid fa-scroll dungeon-item"></i>
+            <div class="tooltiptext">
+              <p>A Mural</p>
+              <img src="images/mural.svg" alt="Mural" />
+            </div>
+          </a>
+          <a href="#skull" class="tooltip" id="dungeon-skull">
+            <i class="fa-solid fa-skull dungeon-item"></i>
+            <div class="tooltiptext">
+              <p>Skeletons Encounter</p>
+              <img src="images/skull.svg" alt="Skeletons" />
+            </div>
+          </a>
+          <a href="#player" class="tooltip" id="dungeon-player">
+            <i
+              class="fa-solid fa-user dungeon-item"
+              style="color: rgb(255, 0, 0)"
+            ></i>
+            <div class="tooltiptext">
+              <p>You</p>
+              <img src="images/pc.svg" alt="Player Position" />
+            </div>
+          </a>
+          <a href="#body" class="tooltip" id="dungeon-body">
+            <i class="fa-solid fa-skull dungeon-item"></i>
+            <div class="tooltiptext">
+              <p>Dead Body</p>
+              <img src="images/dedbody.svg" alt="Body" />
+            </div>
+          </a>
+          <a href="#puzzle" class="tooltip" id="dungeon-puzzle">
+            <i class="fa-solid fa-puzzle-piece dungeon-item"></i>
+            <div class="tooltiptext">
+              <p>An orb?</p>
+              <img src="images/puzzle.svg" alt="Puzzle" />
+            </div>
+          </a>
+          <a href="#note" class="tooltip" id="dungeon-note">
+            <i class="fa-solid fa-scroll dungeon-item"></i>
+            <div class="tooltiptext">
+              <p>A Note</p>
+              <img src="images/note.svg" alt="Note" />
+            </div>
+          </a>
+        </div>
       </div>
-    </div>
 
-    <!-- Legend -->
-    <section class="legend">
-      <h2>Legend</h2>
-      <ul>
-        <li><i class="fa-solid fa-coins"></i> Treasure</li>
-        <li><i class="fa-solid fa-circle-question"></i> Puzzle</li>
-        <li><i class="fa-solid fa-scroll"></i> Lore</li>
-        <li><i class="fa-solid fa-skull"></i> Entity</li>
-        <li><i class="fa-solid fa-user"></i> Player</li>
-      </ul>
-    </section>
+      <!-- Legend -->
+      <section class="legend">
+        <h2>Legend</h2>
+        <ul>
+          <li><i class="fa-solid fa-coins"></i> Treasure</li>
+          <li><i class="fa-solid fa-circle-question"></i> Puzzle</li>
+          <li><i class="fa-solid fa-scroll"></i> Lore</li>
+          <li><i class="fa-solid fa-skull"></i> Entity</li>
+          <li><i class="fa-solid fa-user"></i> Player</li>
+        </ul>
+      </section>
 
-    <!-- Location Profiles -->
-    <section class="location-profiles">
-      <h2>Location Profiles</h2>
+      <section class="item-profiles">
+        <h2>Profiles</h2>
+        <article id="player">
+          <h3>Who are you?</h3>
+          <div class="profile-content">
+            <img src="images/pc.png" alt="Player Position" />
+            <div class="profile-description">
+              <p>
+                You are here, at the entrance of the dungeon. I wonder what you
+                can find? Seeking treasure? Or maybe a monster to slay? Or
+                perhaps you are just here to explore? You never know what you
+                might find. Where will you go? Will you make it out alive?
+              </p>
+              <p>
+                Danger Level: <i class="fa-solid fa-skull"> </i> It should be
+                safe?
+              </p>
+              <div class="back-to-map">
+                <a href="#dungeon-map" class="button">← Back to Map</a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-      <article id="chest">
-        <h3>Treasure Room</h3>
-        <img src="images/chest.svg" alt="Treasure" />
-        <p>A pile of gold glimmers ominously in the torchlight. Is it safe?</p>
-        <p>Danger Level: <i class="fa-solid fa-skull"></i> <i class="fa-solid fa-skull"></i></p>
-        <p>Reward: <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
-      </article>
+        <article id="circle">
+          <h3>Mystic Circle</h3>
+          <div class="profile-content">
+            <img src="images/circle.png" alt="Mystic Circle" />
+            <div class="profile-description">
+              <p>
+                A glowing runic circle pulses with arcane energy. There's
+                nothing in this room besides the circle? There is a passage
+                behind the circle. You don't feel anything but the pulses of
+                arcana? Maybe you should continue further in? Are you winning to
+                walk through the circle? Or will you turn back?
+              </p>
+              <p>
+                Magic Potential: <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </p>
+              <div class="back-to-map">
+                <a href="#dungeon-map" class="button">← Back to Map</a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-      <article id="altar">
-        <h3>Ancient Altar</h3>
-        <img src="images/altar.svg" alt="Altar" />
-        <p>An ancient altar, humming with forgotten energy. Solve its mystery. Seems like there's something missing from the center?</p>
-        <p>Challenge: <i class="fa-solid fa-puzzle-piece"></i> <i class="fa-solid fa-puzzle-piece"></i></p>
-      </article>
+        <article id="body">
+          <h3>Dead Body</h3>
+          <div class="profile-content">
+            <img src="images/dedbody.png" alt="Body" />
+            <div class="profile-description">
+              <p>
+                A corpse lies here, a remnant of a past that has be lost. What
+                were they doing here? Maybe a criminal on the run that stumbled
+                upon this dungeon? Did it just move? Or was it a trick of the
+                light? Are you really sure it's dead? Or is it just sleeping?
+              </p>
+              <p>Danger Level: <i class="fa-solid fa-skull"></i>?</p>
+              <div class="back-to-map">
+                <a href="#dungeon-map" class="button">← Back to Map</a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-      <article id="circle">
-        <h3>Mystic Circle</h3>
-        <img src="images/circle.svg" alt="Circle" />
-        <p>A glowing runic circle pulses with arcane energy.</p>
-        <p>Magic Potential: <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></p>
-      </article>
+        <article id="door">
+          <h3>A Locked Door</h3>
+          <div class="profile-content">
+            <img src="images/door.png" alt="Door" />
+            <div class="profile-description">
+              <p>A locked door? Or is it? What lies beyond the door?</p>
+              <p>Danger Level: <i class="fa-solid fa-skull"></i></p>
+              <div class="back-to-map">
+                <a href="#dungeon-map" class="button">← Back to Map</a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-      <article id="mural">
-        <h3>Ancient Mural</h3>
-        <img src="images/mural.svg" alt="Mural" />
-        <p>A pictograph that tells the story of a lost kingdom.</p>
-        <p>Knowledge: <i class="fa-solid fa-scroll"></i> <i class="fa-solid fa-scroll"></i></p>
-      </article>
+        <article id="altar">
+          <h3>Ancient Altar</h3>
+          <div class="profile-content">
+            <img src="images/altar.png" alt="Altar" />
+            <div class="profile-description">
+              <p>
+                An ancient altar, humming with forgotten energy. Seems like
+                there's something missing from the center?
+              </p>
+              <p>
+                Challenge: <i class="fa-solid fa-puzzle-piece"></i>
+                <i class="fa-solid fa-puzzle-piece"></i>
+              </p>
+              <div class="back-to-map">
+                <a href="#dungeon-map" class="button">← Back to Map</a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-      <article id="skull">
-        <h3>Skeleton</h3>
-        <img src="images/skull.svg" alt="Skeleton" />
-        <p>Hostile undead roams this room. Prepare to fight.</p>
-        <p>Danger Level: <i class="fa-solid fa-skull"></i> <i class="fa-solid fa-skull"></i></p>
-      </article>
+        <article id="chest">
+          <h3>Treasure Room</h3>
+          <div class="profile-content">
+            <img src="images/chest.png" alt="Treasure" />
+            <div class="profile-description">
+              <p>
+                A chest with two rubies enbedded in the lid. The chest is
+                locked. You wonder what could it be? Maybe it's something
+                useful? Or maybe it's just a trap? You should be careful. You
+                never know what could be inside.
+                <br />
+                The chest is locked. You need a key to open it. You can try to
+                pick the lock, but it might be dangerous. Or you can try to find
+                the key. The key is somewhere in the dungeon.
+                <br />
+              </p>
+              <section class="dice-roller">
+                <h2>🎲 Roll for Sleight of Hand!</h2>
+                <div>
+                  <button id="roll-chest">Roll</button>
+                </div>
+                <div>
+                  <p class="dice-result">
+                    You rolled a: <span id="chest-roll-result">-</span>
+                  </p>
+                  <p id="chest-roll-outcome" class="dice-outcome"></p>
+                </div>
+              </section>
 
-      <article id="door">
-        <h3>A Locked Door</h3>
-        <img src="images/door.svg" alt="Skeleton" />
-        <p>A locked door? Or is it? How do you get this to open? What lies beyond the door?</p>
-        <p>Danger Level: <i class="fa-solid fa-skull"></i></p>
-      </article>
+              <div id="chest-hidden-content" style="display: none">
+                <p>
+                  <strong>Success!</strong> The chest creaks open revealing gold
+                  and magical loot.
+                </p>
+                <p>
+                  Danger Level: <i class="fa-solid fa-skull"></i>
+                  <i class="fa-solid fa-skull"></i>
+                </p>
+                <p>
+                  Reward: <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </p>
+              </div>
+              <div class="back-to-map">
+                <a href="#dungeon-map" class="button">← Back to Map</a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-      <article id="player">
-        <h3>You</h3>
-        <img src="images/pc.svg" alt="Player Position" />
-        <p>You are here, preparing to explore the unknown.</p>
-      </article>
+        <article id="skull">
+          <h3>Skeletons</h3>
+          <div class="profile-content">
+            <img src="images/skull.png" alt="Skeleton" />
+            <div class="profile-description">
+              <p>
+                Hostile undead skeletons roams this room. Who were these
+                monsters? What are they guarding? Prepare to fight.
+                <br />
+                One of these skeletons has a key. I wounder what it opens?
+              </p>
+              <p>
+                Danger Level: <i class="fa-solid fa-skull"></i>
+                <i class="fa-solid fa-skull"></i>
+                <i class="fa-solid fa-skull"></i>
+              </p>
+              <div class="back-to-map">
+                <a href="#dungeon-map" class="button">← Back to Map</a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-      <article id="body">
-        <h3>Dead Body</h3>
-        <img src="images/dedbody.svg" alt="Body" />
-        <p>A corpse lies here, a remnant of a past adventurer. The body seems dead, but are you really sure?</p>
-        <p>Danger Level: <i class="fa-solid fa-skull"></i></p>
-        <p>Reward: <i class="fa-solid fa-star"></i></p>
-      </article>
+        <article id="mural">
+          <h3>Ancient Mural</h3>
+          <div class="profile-content">
+            <img src="images/mural.png" alt="Mural" />
+            <div class="profile-description">
+              <p>
+                You made it past the skeletons and in the room you find a mural.
+                This is a mural that tells the story of a lost goddess and her
+                worshippers.
+              </p>
+              <p>
+                Lore: <i class="fa-solid fa-scroll"></i>
+                <i class="fa-solid fa-scroll"></i>
+              </p>
+              <div class="back-to-map">
+                <a href="#dungeon-map" class="button">← Back to Map</a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-      <article id="puzzle">
-        <h3>An Orb?</h3>
-        <img src="images/puzzle.svg  " alt="Orb" />
-        <p>A mysterious orb, its purpose unknown. What will you do? Seems rather odd to be here?</p>
-        <p>Challenge: <i class="fa-solid fa-puzzle-piece"></i></p>
-      </article> 
+        <article id="puzzle">
+          <h3>An Orb?</h3>
+          <div class="profile-content">
+            <img src="images/orb.png" alt="Orb" />
+            <div class="profile-description">
+              <p>
+                A mysterious orb, its purpose unknown. Seems rather odd to be
+                here? What is it doing here?It swirls with colors, it emits a
+                faint glow. The more you look the harder it is to look away. The
+                orb is carved into. It makes you feel uneasy... it feels like
+                something is watching you. Something tells you that it would be
+                important?
+                <br />
+                There is a stack of papers in the room. Maybe you should read
+                it?
+              </p>
+              <p>
+                Puzzle: <i class="fa-solid fa-puzzle-piece"></i
+                ><i class="fa-solid fa-puzzle-piece"></i>
+              </p>
+              <div class="back-to-map">
+                <a href="#dungeon-map" class="button">← Back to Map</a>
+              </div>
+            </div>
+          </div>
+        </article>
 
-      <article id="note">
-        <h3>A Note</h3>
-        <img src="images/note.svg" alt="Note" />
-        <p>A note left behind by a previous adventurer. What secrets does it hold?</p>
-        <p>Knowledge: <i class="fa-solid fa-scroll"></i></p>
-      </article>
+        <article id="note">
+          <h3>A Note</h3>
+          <div class="profile-content">
+            <img src="images/note.png" alt="Note" />
+            <div class="profile-description">
+              <p>
+                A note left behind by a previous adventurer. What secrets does
+                it hold? You recognize the language, but these words haven't
+                been used in years.
+                <br />
+                The note: "For those who've found this, there are many secrets
+                that I know not of. I hope you find what you are looking for. I
+                am sorry for what I have done. I hope you can forgive me. The
+                dawn is ending. And the world will be the witness. The orb is
+                the key of the altar. The key to the next level. I hope you find
+                it before it's too late."
+              </p>
+              <p>
+                Lore: <i class="fa-solid fa-scroll"></i
+                ><i class="fa-solid fa-scroll"></i
+                ><i class="fa-solid fa-scroll"></i>
+              </p>
+              <div class="back-to-map">
+                <a href="#dungeon-map" class="button">← Back to Map</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
 
-    </section>
+    <footer>
+      <p>
+        Credits: Map made by the team. Icons from
+        <a href="https://fontawesome.com">Font Awesome</a>. All images are made
+        by the project team.
+      </p>
+      <p>&copy; 2025 Quest Archive. All rights reserved.</p>
+    </footer>
 
-  </main>
+    <script>
+      const chestHiddenContent = document.getElementById(
+        "chest-hidden-content"
+      );
+      const outcome = document.getElementById("chest-roll-outcome");
 
-  <footer>
-    <p>Credits: Map made by the team. Icons from <a href="https://fontawesome.com">Font Awesome</a>. All images are made by the project team.</p>
-    <p>&copy; 2025 Quest Archive. All rights reserved.</p>
-  </footer>
-</body>
+      const rollButton = document.getElementById("roll-chest");
+
+      rollButton.addEventListener("click", function () {
+        const roll = Math.floor(Math.random() * 20) + 1;
+        document.getElementById("chest-roll-result").textContent = roll;
+
+        if (roll > 15) {
+          chestHiddenContent.style.display = "block";
+          outcome.textContent =
+            "🎉 Success! The chest opens, revealing treasure!";
+          outcome.style.color = "#00ff99";
+        } else {
+          outcome.textContent =
+            "❌ Locked tight! Maybe there's a key somewhere if you explore the dungeon...";
+          outcome.style.color = "#ff6666";
+        }
+
+        // Disable the button after first roll
+        rollButton.disabled = true;
+        rollButton.style.opacity = 0.5;
+        rollButton.style.cursor = "not-allowed";
+      });
+      document
+        .getElementById("dungeon-skull")
+        .addEventListener("click", function () {
+          chestHiddenContent.style.display = "block";
+          document.getElementById("chest-roll-outcome").textContent =
+            "💀 You used the key that you found on the skeleton. The chest unlocks...";
+          document.getElementById("chest-roll-outcome").style.color = "#ffcc00";
+        });
+    </script>
+  </body>
 </html>
