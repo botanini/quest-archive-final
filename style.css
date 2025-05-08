@@ -35,6 +35,7 @@ header {
   box-shadow: 0 2px 8px rgba(63, 63, 63, 0.2);
   top: 0;
   z-index: 1000;
+  border-radius: 8px;
 }
 
 header nav {
@@ -327,7 +328,7 @@ a {
 }
 
 .gallery-group h2 {
-  font-size: 38px;
+  font-size: 24px;
   color: #8475f2;
   margin-bottom: 15px;
   text-align: center;
@@ -335,10 +336,11 @@ a {
 
 .gallery-group p {
   color: #cbe1ff;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 32px;
+  max-width: 800px; 
+  margin: 0 auto;
   text-align: center;
-  margin-bottom: 25px;
 }
 
 .gallery {
@@ -395,7 +397,7 @@ a {
 }
 
 .gallery-list {
-  list-style-type: none;
+  list-style-type: square;
   background-color: #101020;
   padding: 20px 30px;
   margin: 20px 0;
@@ -404,12 +406,14 @@ a {
   box-shadow: 0 4px 6px rgba(132, 117, 242, 0.2);
   font-size: 20px;
   color: #cbe1ff;
+  
 }
 
 .gallery-list li {
   margin-bottom: 10px;
   line-height: 1.6;
   padding-left: 5px;
+  border-bottom: white 1px solid;
 }
 .gallery-list a {
   color: #8475f2;
@@ -473,13 +477,10 @@ a {
   transition: background-color 0.3s ease;
 }
 
-.starter-kit-list li:hover {
-  background-color: #d5def0; /* Slight color pop on hover */
-}
 
 .starter-section p {
   color: #cbe1ff;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.6;
   max-width: 800px;
   margin: 0 auto;
@@ -504,7 +505,7 @@ a {
 
 .intro p {
   font-size: 20px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
   padding-bottom: 12px;
   line-height: 32px;
@@ -636,8 +637,8 @@ h1 {
 .dungeonmap-container {
   width: 1200px;
   height: 675px;
-  border: solid #333 2px;
   margin: 20px auto;
+  border-radius: 8px;
 
   /* Hide scrollbars (cross-browser) */
   scrollbar-width: none; /* Firefox */
@@ -655,6 +656,7 @@ h1 {
   position: relative; /* Needed for positioning markers */
   margin: 0;
   padding: 0;
+  border-radius: 8px; 
 }
 
 /* Marker icon (e.g. treasure, monster, entrance, trap) */
@@ -782,7 +784,7 @@ h1 {
   display: flex;
   flex-direction: column; /* Stack children vertically */
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .legend h2 {
@@ -816,6 +818,7 @@ h1 {
   max-width: 1500px;
   margin: 0 auto;
   padding: 20px;
+  border-radius: 8px;
 }
 .legend iframe {
   width: 100%;
@@ -991,7 +994,6 @@ h1 {
   padding: 20px;
   margin-top: 20px;
   border-radius: 8px;
-  background-color: #c8baff;
 }
 .blog-container header {
   text-align: center;
