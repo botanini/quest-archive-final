@@ -21,9 +21,9 @@
           <li><a href="reviews.html">Reviews</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="starter-kit.html">Starter Kit</a></li>
-          <li><a href="about.html">About</a></li>
           <li><a href="map.html">Map</a></li>
-          <li><a href="blog.html">Visual Essay</a></li>
+          <li><a href="blog.html">DM's Day</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
       </nav>
     </header>
@@ -198,8 +198,25 @@
           <div class="profile-content">
             <img src="images/door.png" alt="Door" />
             <div class="profile-description">
-              <p>A locked door? Or is it? What lies beyond the door?</p>
-              <p>Danger Level: <i class="fa-solid fa-skull"></i></p>
+              <p>
+                A locked door? What lies beyond the door? Do you continue
+                further?
+              </p>
+              <section class="dice-roller">
+                <h2>🎲 Try to Open the Door</h2>
+                <button id="roll-door">Roll</button>
+                <p class="dice-result">
+                  You rolled: <span id="door-roll-result">-</span>
+                </p>
+                <p id="door-roll-outcome" class="dice-outcome"></p>
+              </section>
+              <div id="door-hidden-content" style="display: none">
+                <p>
+                  Turns out... it was never locked. You just needed to push a
+                  bit.
+                </p>
+                <p>Danger Level: <i class="fa-solid fa-skull"></i></p>
+              </div>
               <div class="back-to-map">
                 <a href="#dungeon-map" class="button">← Back to Map</a>
               </div>
@@ -240,7 +257,7 @@
                 <br />
                 The chest is locked. You need a key to open it. You can try to
                 pick the lock, but it might be dangerous. Or you can try to find
-                the key. The key is somewhere in the dungeon.
+                the key.
                 <br />
               </p>
               <section class="dice-roller">
@@ -285,9 +302,10 @@
             <div class="profile-description">
               <p>
                 Hostile undead skeletons roams this room. Who were these
-                monsters? What are they guarding? Prepare to fight.
+                monsters? What are they guarding? The skeletons notice you and
+                they do not look friendly. Prepare to fight.
                 <br />
-                One of these skeletons has a key. I wounder what it opens?
+                One of these skeletons has a key. <b>I wonder what it opens?</b>
               </p>
               <p>
                 Danger Level: <i class="fa-solid fa-skull"></i>
@@ -424,6 +442,28 @@
           document.getElementById("chest-roll-outcome").textContent =
             "💀 You used the key that you found on the skeleton. The chest unlocks...";
           document.getElementById("chest-roll-outcome").style.color = "#ffcc00";
+        });
+
+      const doorHiddenContent = document.getElementById("door-hidden-content");
+      const doorOutcome = document.getElementById("door-roll-outcome");
+
+      document
+        .getElementById("roll-door")
+        .addEventListener("click", function () {
+          const roll = Math.floor(Math.random() * 20) + 1;
+          document.getElementById("door-roll-result").textContent = roll;
+
+          if (roll < 5) {
+            doorHiddenContent.style.display = "none";
+            doorOutcome.textContent =
+              "❌ You try to pull the door handle, wait there aren't any handles. Try again.";
+            doorOutcome.style.color = "#ff6666";
+          } else {
+            doorHiddenContent.style.display = "block";
+            doorOutcome.textContent =
+              "✅ You pushed open the door easily. It wasn’t even locked... You continue further into the dungeon.";
+            doorOutcome.style.color = "#00ff99";
+          }
         });
     </script>
   </body>
