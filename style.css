@@ -92,8 +92,8 @@ header nav img {
   padding-bottom: 32px;
 }
 .lead p {
-  font-size: 30px;
-  color: #8375f286;
+  font-size: 24px;
+  color: #cbe1ff;
   margin-bottom: 20px;
   max-width: 1200px;
   line-height: 1.6;
@@ -103,7 +103,7 @@ header nav img {
   max-width: 800px;
   margin: 0 auto;
   font-size: 20px;
-  color: #57578c;
+  color: #cbe1ff;
   line-height: 1.6;
 }
 
@@ -543,7 +543,7 @@ a {
 }
 
 .review p {
-  margin-left: 30px;
+  margin-left: 60px;
   font-size: 20px;
   line-height: 40px;
   margin-bottom: 20px;
@@ -609,7 +609,7 @@ a {
   right: 0;
   top: 0;
   width: 340px;
-  padding: 20px;
+  padding: 10px;
   color: #cbe1ff;
 }
 
